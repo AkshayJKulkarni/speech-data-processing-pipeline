@@ -110,18 +110,6 @@ All pipeline behavior is controlled via YAML files in `configs/`:
 
 ---
 
-## Development Status
-
-- [x] Phase 1 — Project structure & configuration
-- [ ] Phase 2 — Audio acquisition
-- [ ] Phase 3 — Audio preprocessing
-- [ ] Phase 4 — Transcription
-- [ ] Phase 5 — Speaker diarization
-- [ ] Phase 6 — Emotion classification
-- [ ] Phase 7 — Annotation export & batch processing
-
----
-
 ## License
 
 MIT
