@@ -108,7 +108,82 @@ All pipeline behavior is controlled via YAML files in `configs/`:
 | Deep Learning | PyTorch, Transformers |
 | Media Acquisition | yt-dlp |
 
+## Key Features
+
+- End-to-end speech data processing pipeline
+- Modular architecture with configurable YAML-based workflows
+- Automated audio/video acquisition from local files and online sources
+- Audio normalization to 16kHz mono WAV for speech model compatibility
+- Whisper-based speech transcription
+- Speaker diarization using pyannote.audio
+- Emotion classification using SpeechBrain
+- Structured annotation export (JSON, CSV)
+- Centralized logging and error handling
+- Batch processing support
+- Idempotent pipeline execution
 ---
+## Example Annotation Output
+
+{
+  "speaker": "Speaker_0",
+  "start_time": 0.00,
+  "end_time": 2.54,
+  "transcript": "Hello everyone",
+  "emotion": "happy",
+  "confidence": 0.94
+}
+
+---
+## Why This Project?
+
+Modern speech AI systems require large volumes of high-quality annotated speech data. This platform automates the process of transforming raw audio and video into structured training-ready datasets by combining speech transcription, speaker diarization, and emotion recognition into a single workflow.
+
+The generated outputs can be used for:
+- Speech-to-Text (ASR) datasets
+- Text-to-Speech (TTS) training pipelines
+- Conversational AI systems
+- Speaker recognition research
+- Emotion-aware speech applications
+
+---
+
+## Architecture
+
+```mermaid
+flowchart TD
+    A[Audio / Video Input]
+    B[Acquisition]
+    C[Preprocessing]
+    D[Whisper Transcription]
+    E[Speaker Diarization]
+    F[Emotion Classification]
+    G[Annotation Export]
+
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    E --> F
+    D --> G
+    E --> G
+    F --> G
+```
+---
+
+Project Status
+
+Core pipeline implementation completed. Additional validation and performance optimization are ongoing.
+---
+
+## Future Improvements
+
+- Distributed batch processing
+- Real-time streaming inference
+- Multi-language support
+- Web-based monitoring dashboard
+- Cloud deployment and orchestration
+- Human-in-the-loop annotation review
+  
 
 ## License
 
