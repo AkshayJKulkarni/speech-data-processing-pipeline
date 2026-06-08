@@ -1,0 +1,20 @@
+# Model configuration
+
+transcription:
+  model: "whisper"
+  model_size: "base"          # tiny | base | small | medium | large
+  language: "en"
+  device: "cpu"               # cpu | cuda
+
+diarization:
+  model: "pyannote/speaker-diarization-3.1"  # latest stable gated model
+  device: "cpu"               # cpu | cuda | auto
+  min_speakers: 1
+  max_speakers: 10
+  hf_token_env: "HF_TOKEN"   # name of the environment variable holding the token
+
+emotion:
+  model: "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition"
+  device: "cpu"               # cpu | cuda | auto
+  min_segment_duration: 0.5  # seconds — segments shorter than this are skipped
+  batch_size: 8              # number of segments processed per inference call

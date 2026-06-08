@@ -1,0 +1,21 @@
+# Pipeline configuration
+# All paths are relative to the project root
+
+pipeline:
+  name: "speech-data-processing"
+  version: "1.0.0"
+
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  output_data: "data/output"
+  logs: "logs"
+
+audio:
+  target_sample_rate: 16000   # Hz — standard for most ASR models
+  target_channels: 1          # Mono
+  output_format: "wav"
+
+logging:
+  level: "INFO"               # DEBUG | INFO | WARNING | ERROR
+  log_to_file: true

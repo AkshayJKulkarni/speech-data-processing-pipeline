@@ -1,0 +1,35 @@
+# ── Core utilities ──────────────────────────────────────────────
+pyyaml>=6.0.1
+
+# ── Audio processing ─────────────────────────────────────────────
+librosa>=0.10.1
+soundfile>=0.12.1
+pydub>=0.25.1
+ffmpeg-python>=0.2.0
+numpy>=1.26.0
+scipy>=1.11.0         # librosa resampling backend (polyphase filter)
+
+# ── Speech-to-text ───────────────────────────────────────────────
+openai-whisper>=20231117
+
+# ── Speaker diarization ──────────────────────────────────────────
+pyannote.audio>=3.1.1
+
+# ── Emotion classification ───────────────────────────────────────
+speechbrain>=1.0.0
+
+# ── ML / Tensor ──────────────────────────────────────────────────
+torch>=2.1.0
+torchaudio>=2.1.0
+transformers>=4.37.0
+
+# ── Data handling ────────────────────────────────────────────────
+pandas>=2.1.0
+numpy>=1.26.0
+
+# ── Media acquisition ────────────────────────────────────────────
+yt-dlp>=2024.1.0
+requests>=2.31.0
+
+# ── Testing ──────────────────────────────────────────────────────
+pytest>=7.4.0
